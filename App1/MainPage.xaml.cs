@@ -67,30 +67,30 @@ namespace App1
             var info = new TruckInfo()
             {
                 ID = "1",
-                Name = "Name lala",
-                Style = "Mechico"
+                Name = "Truck01",
+                Style = "Style01"
             };
 
             var infos = new TruckInfo[] {
 
                 new TruckInfo(){
-                    ID = "4",
-                    Name = "lala4",
-                    Style = "lolo4"
+                    ID = "2",
+                    Name = "Truck02",
+                    Style = "Style02"
                 },
 
                 new TruckInfo()
                 {
-                    ID = "5",
-                    Name = "lala5",
-                    Style = "lolo5"
+                    ID = "3",
+                    Name = "Truck03",
+                    Style = "Style03"
                 },
 
                 new TruckInfo()
                 {
-                    ID ="6",
-                    Name = "lala6",
-                    Style = "lolo6"
+                    ID ="4",
+                    Name = "Truck04",
+                    Style = "Style04"
                 }
             };
 
