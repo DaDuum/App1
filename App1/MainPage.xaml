@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.Resources>
+
+            <DataTemplate x:Key="TruckInfoDataTemp">
+                <StackPanel x:Name="TruckPanel">
+                    <TextBlock Text="{Binding ID}"/>
+                    <TextBlock Text="{Binding Name}" />
+                    <TextBlock Text="{Binding Style}" />
+                </StackPanel>
+            </DataTemplate>
+        </Grid.Resources>
+        <!--<ListBox 
+            SelectedItem="{Binding SelectedTruck, Mode=TwoWay}"
+            ItemsSource="{Binding Trucks}"
+            ItemTemplate="{StaticResource TruckInfoDataTemp}"/>-->
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <TextBlock Text="Selected truck : "/>
+            <TextBlock Text="{Binding SelectedTruck.Name}"/>
+        </StackPanel>
+        <ListBox Grid.Row="1" 
+                 SelectedItem="{Binding SelectedTruck, Mode=TwoWay}" 
+                 ItemsSource="{Binding Trucks}"
+                 ItemTemplate="{StaticResource TruckInfoDataTemp}"/>
+
+    </Grid>
+</Page>
